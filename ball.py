@@ -39,7 +39,7 @@ class Ball:
             return True
         return False
     
-    def check_ball_lost(self):
+    def lost(self):
         return self.pos_y > WINDOW_SIZE + self.radius
     
     def update(self):
@@ -53,6 +53,5 @@ class Ball:
             self.radius * 2
             )
         
-    
     def draw(self, window):
         pygame.draw.circle(window, self.color, (self.pos_x, self.pos_y), self.radius)
