@@ -9,9 +9,9 @@ class Ball:
     radius = BALL_RADIUS
     
     def __init__(self):
-        self.speed_x = random.random() * 6 - 3
-        self.speed_y = random.random() * 3 + 3
-        self.pos_x = random.random() * (0.5 * WINDOW_SIZE) + 0.25 * WINDOW_SIZE
+        self.speed_x = random.random() * 8 - 4
+        self.speed_y = random.random() * 2 + 3
+        self.pos_x = random.random() * (0.6 * WINDOW_SIZE) + 0.2 * WINDOW_SIZE
         self.pos_y = float(self.radius)
 
         self.hitbox = pygame.Rect(
