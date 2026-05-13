@@ -24,9 +24,9 @@ class Paddle:
         keys = pygame.key.get_pressed()
     
         if keys[pygame.K_RIGHT]:
-            self.pos_x += self.speed_x
+            self.pos_x = min(self.pos_x + self.speed_x, WINDOW_SIZE - self.width)
         if keys[pygame.K_LEFT]:
-            self.pos_x -= self.speed_x
+            self.pos_x = max(self.pos_x - self.speed_x, 0)
             
         self.hitbox = pygame.Rect(
             self.pos_x,
